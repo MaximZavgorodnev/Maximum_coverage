@@ -115,7 +115,7 @@ class MainKtTest {
     }
 
     @Test
-    fun calculatingTheLimit_OtherCardlimitExceeded() {
+    fun calculatingTheLimit_VisaCardlimitExceeded() {
         assertEquals("лимит привышен", calculatingTheLimit(
             cardType = "Visa",
             amountOfPreviousTransfersM = 1_500_000,
@@ -124,11 +124,66 @@ class MainKtTest {
     }
 
     @Test
-    fun calculatingTheLimit_OtherCardNotlimitExceeded() {
+    fun calculatingTheLimit_VisaCardNotlimitExceeded() {
         assertEquals("лимит не привышен", calculatingTheLimit(
-            cardType = "VK Pay",
+            cardType = "Visa",
             amountOfPreviousTransfersM = 15_000,
             transferNow = 15_000
         ))
     }
+
+    @Test
+    fun calculatingTheLimit_MastercardlimitExceeded() {
+        assertEquals("лимит привышен", calculatingTheLimit(
+            cardType = "Masterkard",
+            amountOfPreviousTransfersM = 1_500_000,
+            transferNow = 15_000
+        ))
+    }
+
+    @Test
+    fun calculatingTheLimit_MasterkardNotlimitExceeded() {
+        assertEquals("лимит не привышен", calculatingTheLimit(
+            cardType = "Masterkard",
+            amountOfPreviousTransfersM = 15_000,
+            transferNow = 15_000
+        ))
+    }
+
+    @Test
+    fun calculatingTheLimit_MaestroCardlimitExceeded() {
+        assertEquals("лимит привышен", calculatingTheLimit(
+            cardType = "Maestro",
+            amountOfPreviousTransfersM = 1_500_000,
+            transferNow = 15_000
+        ))
+    }
+
+    @Test
+    fun calculatingTheLimit_MaestroCardNotlimitExceeded() {
+        assertEquals("лимит не привышен", calculatingTheLimit(
+            cardType = "Maestro",
+            amountOfPreviousTransfersM = 15_000,
+            transferNow = 15_000
+        ))
+    }
+
+    @Test
+    fun calculatingTheLimit_MirCardlimitExceeded() {
+        assertEquals("лимит привышен", calculatingTheLimit(
+            cardType = "Мир",
+            amountOfPreviousTransfersM = 1_500_000,
+            transferNow = 15_000
+        ))
+    }
+
+    @Test
+    fun calculatingTheLimit_MirCardNotlimitExceeded() {
+        assertEquals("лимит не привышен", calculatingTheLimit(
+            cardType = "Мир",
+            amountOfPreviousTransfersM = 15_000,
+            transferNow = 15_000
+        ))
+    }
+
 }

@@ -24,26 +24,26 @@ fun main(){
 <span class="nc" id="L24">}</span>
 
 <span class="nc" id="L26">fun calculationCommission(cardType: String = &quot;VK Pay&quot;, amountOfPreviousTransfersM: Int = 0, transferNow: Int): Double{</span>
-<span class="fc" id="L27">    val minCommission = 35.0 // Минимальная комиссия 35 руб</span>
-<span class="pc bpc" id="L28" title="2 of 3 branches missed.">    val comimssion = when (cardType){</span>
+<span class="nc" id="L27">    val minCommission = 35.0 // Минимальная комиссия 35 руб</span>
+<span class="nc bnc" id="L28" title="All 3 branches missed.">    val comimssion = when (cardType){</span>
 <span class="nc bnc" id="L29" title="All 4 branches missed.">        &quot;Masterkard&quot;, &quot;Maestro&quot; -&gt; if ((amountOfPreviousTransfersM &gt; 300)&amp;&amp;(amountOfPreviousTransfersM &lt; 75000)) 0.0 else ((transferNow * 0.006) + 20)</span>
-<span class="pc bpc" id="L30" title="1 of 2 branches missed.">        &quot;Visa&quot;, &quot;Мир&quot; -&gt;  if ((transferNow * 0.0075) &lt;= minCommission) minCommission else (transferNow * 0.0075)</span>
+<span class="nc bnc" id="L30" title="All 2 branches missed.">        &quot;Visa&quot;, &quot;Мир&quot; -&gt;  if ((transferNow * 0.0075) &lt;= minCommission) minCommission else (transferNow * 0.0075)</span>
 <span class="nc" id="L31">        else -&gt; 0.0</span>
     }
-<span class="fc" id="L33">    return comimssion</span>
+<span class="nc" id="L33">    return comimssion</span>
 }
 
 <span class="nc" id="L36">fun calculatingTheLimit(cardType: String = &quot;VK Pay&quot;, amountOfPreviousTransfersM: Int = 0, transferNow: Int): String {</span>
-<span class="nc" id="L37">    val limitPerDay = 150000 //Лимит перевода по карте в день</span>
-<span class="nc" id="L38">    val limitPerMonth = 600000 // Лимит перевода в месяц</span>
+<span class="fc" id="L37">    val limitPerDay = 150000 //Лимит перевода по карте в день</span>
+<span class="fc" id="L38">    val limitPerMonth = 600000 // Лимит перевода в месяц</span>
 
-<span class="nc" id="L40">    val limitPerDayVk = 15000 //Лимит перевода по карте в день</span>
-<span class="nc" id="L41">    val limitPerMonthVk = 40000 // Лимит перевода в месяц</span>
+<span class="fc" id="L40">    val limitPerDayVk = 15000 //Лимит перевода по карте в день</span>
+<span class="fc" id="L41">    val limitPerMonthVk = 40000 // Лимит перевода в месяц</span>
 
-<span class="nc" id="L43">    val limit = when(cardType){</span>
-<span class="nc bnc" id="L44" title="All 6 branches missed.">        &quot;VK Pay&quot; -&gt; if ((amountOfPreviousTransfersM &lt;= limitPerMonthVk)&amp;&amp;(transferNow &lt;= limitPerDayVk)) &quot;лимит не привышен&quot; else &quot;лимит привышен&quot;</span>
-<span class="nc bnc" id="L45" title="All 4 branches missed.">        else -&gt; if ((amountOfPreviousTransfersM &lt;= limitPerMonth)&amp;&amp;(transferNow &lt;= limitPerDay)) &quot;лимит не привышен&quot; else &quot;лимит привышен&quot;</span>
+<span class="fc" id="L43">    val limit = when(cardType){</span>
+<span class="pc bpc" id="L44" title="5 of 6 branches missed.">        &quot;VK Pay&quot; -&gt; if ((amountOfPreviousTransfersM &lt;= limitPerMonthVk)&amp;&amp;(transferNow &lt;= limitPerDayVk)) &quot;лимит не привышен&quot; else &quot;лимит привышен&quot;</span>
+<span class="pc bpc" id="L45" title="3 of 4 branches missed.">        else -&gt; if ((amountOfPreviousTransfersM &lt;= limitPerMonth)&amp;&amp;(transferNow &lt;= limitPerDay)) &quot;лимит не привышен&quot; else &quot;лимит привышен&quot;</span>
     }
-<span class="nc" id="L47">    return limit</span>
+<span class="fc" id="L47">    return limit</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
