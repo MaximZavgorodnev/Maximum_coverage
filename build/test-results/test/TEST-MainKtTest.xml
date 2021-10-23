@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MainKtTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2021-10-23T12:57:32" hostname="MacBook-Pro-Admin.local" time="0.012">
+<testsuite name="MainKtTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2021-10-23T13:01:00" hostname="MacBook-Pro-Admin.local" time="0.011">
   <properties/>
-  <testcase name="calculatingTheLimit_VklimitExceeded" classname="MainKtTest" time="0.009"/>
+  <testcase name="calculatingTheLimit_VklimitExceeded" classname="MainKtTest" time="0.008"/>
   <testcase name="calculationCommission_MaestroAddComission" classname="MainKtTest" time="0.0"/>
-  <testcase name="calculationCommission_MirMinComission" classname="MainKtTest" time="0.001"/>
+  <testcase name="calculationCommission_MirMinComission" classname="MainKtTest" time="0.0"/>
   <testcase name="calculatingTheLimit_OtherCardNotlimitExceeded" classname="MainKtTest" time="0.0"/>
   <testcase name="calculatingTheLimit_OtherCardlimitExceeded" classname="MainKtTest" time="0.0"/>
   <testcase name="calculationCommission_VisaComission" classname="MainKtTest" time="0.0"/>

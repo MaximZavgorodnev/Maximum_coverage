@@ -19,13 +19,13 @@ class MainKtTest {
         )
 
         //assert
-        assertEquals(1.0, result)
+        assertEquals(0.0, result)
     }
 
     @Test
     fun calculationCommission_MastercardAddComission() {
         //assert
-        assertEquals(121.8, calculationCommission(
+        assertEquals(21.8, calculationCommission(
             cardType = "Masterkard",
             amountOfPreviousTransfersM = 0,
             transferNow = 300
@@ -34,7 +34,7 @@ class MainKtTest {
 
     @Test
     fun calculationCommission_MastercardNotComission() {
-        assertEquals(10.0, calculationCommission(
+        assertEquals(0.0, calculationCommission(
             cardType = "Masterkard",
             amountOfPreviousTransfersM = 350,
             transferNow = 320
