@@ -1,0 +1,1 @@
+/Users/admin/Desktop/Обучение Android/Kotlin/Maximum_coverage/build/classes/kotlin/main/MainKt.class
